@@ -5,9 +5,14 @@ feather.replace();
         const listr = document.querySelector("#rode-error");
         const listg = document.querySelector("#groene-error");
         const listb = document.querySelector("#blauwe-error");
-       
+        //lijsten niet actief///////////////////////////////////////////////////////////////
+        //col niet actief///////////////////////////////////////////////////////////////
+
+
 
         const valideervoornaam = () => {
+            const product = document.querySelector("#product")
+            console.log(product);
         }
         const valideernaam = () => {
         }
@@ -20,34 +25,54 @@ feather.replace();
         const valideerprovincie = () => {
         }
         const showlist = () => {
-            if (listb.value != "" && listr.value != "" && listg.value != "") {
-                //constrole 1ste keer
-                if(firstTime){
-                    list.textContent= "";
-                    firstTime = false;
-                }
-                
-                //porduct toevoegen
-                addToList(product.value);
+            if (listr.value != "" || listg.value != "" || listb.value != "") {
 
-                //leegmaken veld
-                product.value = "";
+                //col naar alertstand
+
+                if ( listr.value != "") {
+                    
+                    //laat list zien////////////////////////////////////////////////////////////////////////
+                                    
+                }
+                else{                
+                    
+                    //lijst verberg/////////////////////
+                }
+    
+                if (listg.value != "") {
+                    
+                    //laat list zien//////////////////////////////
+                    
+                }
+                else{                
+                    //lijst verberg/////////////////////
+                }
+    
+                if (listb.value != "") {
+                    //laat list zien/////////////////////////////
+                }
+                else{                
+                    //lijst verberg/////////////////////
+                }               
             }
             else{
-                //foutmelding
-                alert("alles is goed"); //geen errors = errors nietlaten zien.
+                //col terug naar standaart/////////////////////              
+                //alle lijsten verberg/////////////////////
             }
+            
         }
 
-
-
-        const valideer = () => {        
+        const valideer = () => { 
+        //error lijsten leeg maken
+        listr = "", listg = "", listb= ""    
+        //error's zoeken en toevoegen
         valideervoornaam
         valideernaam
         valideergebuikersnaam
         valideeradres
         valideerland
         valideerprovincie
+        //error's tonnen
         showlist       
         }
 
