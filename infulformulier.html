@@ -186,7 +186,7 @@
 
                     <!--https://getbootstrap.com/docs/5.2/components/buttons/#button-tags-->
                     <div class="d-grid gap-2 col-12 mx-auto mt-4">
-                        <button class="btn btn-primary" type="submit">
+                        <button class="btn btn-primary" id="button1" type="submit">
                             <h4>Wave your magic wand</h4>
                         </button>
                     </div>
@@ -198,18 +198,22 @@
                 <div class="row">
                     <!--rode alert -->
                     <div class="alert alert-danger" role="alert">
-                        <h4>Yikes, errors...</h4>
+                        <h4>Yikes, errors...
+                            <ol id="rode-error"></ol>
+                        </h4>
                     </div>
 
                     <!--groene alert -->
                     <div class="alert alert-success" role="alert">
                         <h4>Goed gedaan!</h4>
                         <p>Aww yeah, je werd geiregistreerd.</p>
+                        <ol id="groene-error"></ol>
                     </div>
 
                     <!--licht blauwe alert -->
                     <div class="alert alert-primary" role="alert">
                         <h4>Betallingswijze</h4>
+                        <ol id="blauwe-error"></ol>
                     </div>
                 </div>
             </div>
