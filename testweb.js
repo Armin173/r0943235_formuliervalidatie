@@ -5,12 +5,27 @@ feather.replace();
         const listr = document.querySelector("#rode-error");
         const listg = document.querySelector("#groene-error");
         const listb = document.querySelector("#blauwe-error");
-        //lijsten niet actief///////////////////////////////////////////////////////////////
+        var alertstandr = document.getElementById("rode");
+        var alertstandb = document.getElementById("blauwe");
+        var alertstandg = document.getElementById("groene");
+        
+          
         //col niet actief///////////////////////////////////////////////////////////////
 
 
 
+        function checkEmptyField(input) {
+            if ( input.value != "") {
+            }
+            else
+        }
+
+
+
         const valideervoornaam = () => {
+            
+            checkEmptyField(input)
+            
             const product = document.querySelector("#product")
             console.log(product);
         }
@@ -25,39 +40,45 @@ feather.replace();
         const valideerprovincie = () => {
         }
         const showlist = () => {
+            
+            listr.push('pear');
             if (listr.value != "" || listg.value != "" || listb.value != "") {
 
                 //col naar alertstand
 
-                if ( listr.value != "") {
-                    
-                    //laat list zien////////////////////////////////////////////////////////////////////////
-                                    
+                if ( listr.value != "") {   
+                    if (alertstandr.style.display === "none") {
+                        alertstandr.style.display = "block";
                 }
-                else{                
-                    
-                    //lijst verberg/////////////////////
+                else{
+                    if (alertstandr.style.display === "block") {                     
+                        alertstandr.style.display = "none";                                             
                 }
     
                 if (listg.value != "") {
-                    
-                    //laat list zien//////////////////////////////
-                    
+                    if (alertstandg.style.display === "none") {
+                        alertstandg.style.display = "block";
                 }
-                else{                
-                    //lijst verberg/////////////////////
+                else{
+                    if (alertstandg.style.display === "block") {                     
+                        alertstandg.style.display = "none";                                             
                 }
     
                 if (listb.value != "") {
-                    //laat list zien/////////////////////////////
+                    if (alertstandb.style.display === "none") {
+                        alertstandb.style.display = "block";
                 }
-                else{                
-                    //lijst verberg/////////////////////
+                else{
+                    if (alertstandb.style.display === "block") {                     
+                        alertstandb.style.display = "none";                                             
                 }               
             }
             else{
                 //col terug naar standaart/////////////////////              
-                //alle lijsten verberg/////////////////////
+                                     
+                alertstandr.style.display = "none";                 
+                alertstandg.style.display = "none";                                         
+                alertstandb.style.display = "none";
             }
             
         }
